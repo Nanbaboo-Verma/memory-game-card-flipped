@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>flipped Card Game</title>
+  </head>
+  <body>
+    <div class="flipp-card__container">
+      <div class="game-header">
+        <div class="game-heading__title">Pairs Game</div>
+        <div id="game-content__wrapper">
+          <div class="score-card__wrapper">
+            <div class="score-title total-score">Total Scores: 0</div>
+            <div class="score-title total-clicked">Total Clicks: 0</div>
+          </div>
+
+          <select id="selectCard" class="select-card">
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="start-section" id="conformation-section__popup">
+        <div class="start-wrapper">
+          <h1>Are you ready start the game</h1>
+          <h2 class="question-mark">?</h2>
+          <div class="confirm-btn__wrapper">
+            <button class="btn-primary" id="game-start-btn">Start</button>
+            <button class="btn-primary" id="btn-no">No</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="game-card__container">
+        <div id="game-card-wrapper"></div>
+      </div>
+
+      <div id="game-win-board">
+        <div class="start-wrapper">
+          <h1>Woow Congratulations you won!</h1>
+
+          <div class="score-title total-clicked">Total Clicks: 0</div>
+          <div class="score-title total-score">Total Scores: 0</div>
+
+          <div class="confirm-btn__wrapper">
+            <button id="new-game-start" class="btn-primary">
+              Start New Game
+            </button>
+            <button class="btn-primary" id="game-not-restarted">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
