@@ -3,6 +3,10 @@ const emojis = ["🍎", "🍇", "🍓", "🍑", "🥭", "🍏"];
 const conform = document.getElementById("conformation-section__popup");
 const gameStartBtn = document.getElementById("game-start-btn");
 
+window.addEventListener("load", () => {
+  document.body.style.overflow = "hidden";
+});
+
 let changeCardFlipped = 2; // Default 2 cards flipping
 
 let score = 0;
@@ -63,6 +67,7 @@ const winBoard = (winScoreBoard) => {
   setTimeout(() => {
     winScoreBoard.classList.add("visible");
   }, 0);
+  document.body.style.overflow = "hidden";
 };
 
 const resetGame = (
@@ -91,6 +96,7 @@ const resetGame = (
 };
 
 gameStartBtn.addEventListener("click", () => {
+  document.body.style.overflow = "auto";
   conform.classList.add("scale-start-btn");
 });
 
@@ -120,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameClicks = document.querySelectorAll(".total-clicked");
   const totalScoreBoard = document.querySelectorAll(".total-score");
   const winScoreBoard = document.getElementById("game-win-board");
-  const newGameStartBtn = document.getElementById("new-game-start");
+  const startNewGame = document.getElementById("new-game-start");
   const gameNotRestarted = document.getElementById("game-not-restarted");
 
   storeCardFront(cardFaces, createDynamicArray(emojis, changeCardFlipped));
@@ -169,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  newGameStartBtn.addEventListener("click", () => {
+  startNewGame.addEventListener("click", () => {
     resetGame(
       totalScoreBoard,
       cardFaces,
@@ -180,6 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
       emojis,
       changeCardFlipped
     );
+    document.body.style.overflow = "auto";
   });
   gameNotRestarted.addEventListener("click", () => {
     window.location.reload(true);
