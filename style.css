@@ -252,13 +252,16 @@
     gap: 15px;
   }
   .game-card {
-    height: 120px;
-    width: 120px;
+    height: 119px;
+    width: 119px;
   }
 }
-@media (max-width: 435px) {
+@media (max-width: 432px) {
+  .game-card .back-card {
+    font-size: 45px;
+  }
   #game-card__container {
-    padding: 230px 20px 200px;
+    padding: 210px 20px 180px;
   }
 }
 /* @media (max-width: 357px) {
