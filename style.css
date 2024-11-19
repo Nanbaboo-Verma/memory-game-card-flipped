@@ -222,17 +222,13 @@
     padding: 24px;
     margin: 0 20px;
   }
-  .game-card {
-    height: 130px;
-    width: 130px;
-  }
 }
 
-/* @media (max-width: 693px) {
+@media (max-width: 693px) {
   #game-card__container {
     padding: 170px 20px 150px;
   }
-} */
+}
 
 @media (max-width: 525px) {
   .start-wrapper h1 {
@@ -241,31 +237,20 @@
   .question-mark {
     font-size: 40px;
   }
-  /* #game-card__container {
+  #game-card__container {
     padding: 350px 20px 320px;
-  } */
+  }
   .game-heading__title {
-    font-size: 28px;
+    font-size: 24px;
   }
   .game-start__action,
   .game-restart__action {
     gap: 15px;
   }
-  .game-card {
-    height: 119px;
-    width: 119px;
-  }
 }
-@media (max-width: 432px) {
-  .game-card .back-card {
-    font-size: 45px;
-  }
-  #game-card__container {
-    padding: 210px 20px 180px;
-  }
-}
-/* @media (max-width: 357px) {
+
+@media (max-width: 357px) {
   #game-card__container {
     padding: 850px 20px 820px;
   }
-} */
+}
