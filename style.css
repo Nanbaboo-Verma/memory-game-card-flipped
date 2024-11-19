@@ -1,23 +1,36 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
   font-family: sans-serif;
 }
 
 #game-win-board,
 .start-section {
-  display: flex;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   z-index: 1;
-  align-items: center;
   justify-content: center;
   background-color: #000000d9;
-  /* #000000de; */
   transition: transform 0.4s ease;
+}
+
+#game-win-board,
+.start-section,
+.game-start__action,
+.game-restart__action,
+.game-header,
+#game-card__container,
+#game-content__wrapper,
+.score-card__wrapper,
+#game-card-wrapper,
+.game-card .front-card,
+.game-card .back-card {
+  display: flex;
+  align-items: center;
 }
 
 .scale-start-btn {
@@ -36,14 +49,14 @@
   justify-content: space-between;
   background-color: #ffffff1a;
 }
+
 .start-wrapper h1 {
   color: #fff;
 }
+
 #game-content__wrapper,
 .score-card__wrapper {
-  display: flex;
   gap: 20px;
-  align-items: center;
 }
 
 .select-card {
@@ -66,10 +79,10 @@
   text-align: center;
   font-size: 45px;
 }
-.confirm-btn__wrapper {
-  display: flex;
+
+.game-start__action,
+.game-restart__action {
   justify-content: center;
-  align-items: center;
   gap: 20px;
   button {
     width: 100%;
@@ -77,29 +90,31 @@
 }
 
 .game-header {
-  display: flex;
   padding: 20px;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 1;
-  align-items: center;
   background-color: #fff;
   justify-content: space-between;
   box-shadow: 0 4px 4px -2px #dbd2f7;
 }
+
 .game-heading__title {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
   color: #8f21e3;
 }
+
 .score-card__wrapper .score-title {
   color: #8f21e3;
   font-size: 20px;
 }
+
 #game-win-board .score-title {
   color: #fff;
 }
+
 .btn-primary {
   background-color: #855ef0;
   border: none;
@@ -116,19 +131,15 @@
 
 #game-card__container {
   position: relative;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 82px 20px 0;
   height: calc(100vh - 81px);
   justify-content: center;
 }
 
 #game-card-wrapper {
-  display: flex;
   gap: 18px;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   max-width: 700px;
 }
@@ -146,10 +157,8 @@
 .game-card .front-card,
 .game-card .back-card {
   margin: 0;
-  display: flex;
   border-radius: 5px;
   justify-content: center;
-  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -204,7 +213,7 @@
     display: flex;
     border: 1px solid #dbd2f7;
     justify-content: space-evenly;
-    background-color: #e5e5e5;
+    background-color: #f6e9ff;
   }
   #game-card__container {
     height: calc(100vh - 138px);
@@ -213,12 +222,18 @@
     padding: 24px;
     margin: 0 20px;
   }
+  .game-card {
+    height: 130px;
+    width: 130px;
+  }
 }
-@media (max-width: 693px) {
+
+/* @media (max-width: 693px) {
   #game-card__container {
     padding: 170px 20px 150px;
   }
-}
+} */
+
 @media (max-width: 525px) {
   .start-wrapper h1 {
     font-size: 26px;
@@ -226,19 +241,28 @@
   .question-mark {
     font-size: 40px;
   }
-  #game-card__container {
+  /* #game-card__container {
     padding: 350px 20px 320px;
-  }
+  } */
   .game-heading__title {
-    font-size: 24px;
+    font-size: 28px;
   }
-  .confirm-btn__wrapper {
+  .game-start__action,
+  .game-restart__action {
     gap: 15px;
   }
+  .game-card {
+    height: 120px;
+    width: 120px;
+  }
 }
-
-@media (max-width: 357px) {
+@media (max-width: 435px) {
+  #game-card__container {
+    padding: 230px 20px 200px;
+  }
+}
+/* @media (max-width: 357px) {
   #game-card__container {
     padding: 850px 20px 820px;
   }
-}
+} */

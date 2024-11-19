@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>flipped Card Game</title>
+    <title>Flipping Cards Game</title>
   </head>
   <body>
     <div class="flipp-card__container">
@@ -28,7 +28,7 @@
         <div class="start-wrapper">
           <h1>Are you ready start the game</h1>
           <h2 class="question-mark">?</h2>
-          <div class="confirm-btn__wrapper">
+          <div class="game-start__action">
             <button class="btn-primary" id="game-start-btn">Start</button>
             <button class="btn-primary" id="btn-no">No</button>
           </div>
@@ -42,11 +42,9 @@
       <div id="game-win-board">
         <div class="start-wrapper">
           <h1>Congratulations you won!</h1>
-
-          <div class="score-title total-clicked">Total Clicks: 0</div>
           <div class="score-title total-score">Total Scores: 0</div>
-
-          <div class="confirm-btn__wrapper">
+          <div class="score-title total-clicked">Total Clicks: 0</div>
+          <div class="game-restart__action">
             <button id="new-game-start" class="btn-primary">
               Start New Game
             </button>
